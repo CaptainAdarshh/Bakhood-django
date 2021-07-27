@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Base</title>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+<div class="navbar header">
+<ul class="nav navbar-nav">
+<li><a class="navbar-Brand" href="{% url 'index' %}">Bakchod Home</a></li>
+<li><a class="navbar-link" href="{% url 'app:baklist' %}">Bakchods List</a></li>
+<li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+
+</ul>
+</div>
+</nav>
+
+<div class="container">
+    {% block body_block %}
+    
+    
+    {% endblock %}
+</div>
+
+
+    
+
+</body>
+</html>
