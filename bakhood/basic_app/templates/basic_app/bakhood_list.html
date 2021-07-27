@@ -1,10 +1,11 @@
 {% extends "basic_app/basic_app_base.html" %}
 {% block body_block %}
 
-<h1>Welcome to the list of all the schools:</h1>
-
+<h1>Welcome to the list of all the Bakchods:</h1>
+<p><a class="btn btn-primary" href="{% url 'app:bakcreate' %}">Create</a></p>
 <ol>
 {% for bakhood in bakhoods %}
+
 <h2><li><a href="{{bakhood.id}}">{{bakhood.name}}</a></li></h2>
 
 {% endfor %}

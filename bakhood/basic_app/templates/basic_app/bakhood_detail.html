@@ -28,7 +28,7 @@
 </div>
 
 <div class="container">
-<p><a class="btn btn-warning" href="{% url 'app:bakupdate' pk=bakhood_detail.pk %}">Update</a></p>
+<p><a class="btn btn-warning" href="{% url 'app:bakupdate' pk=bakhood_detail.pk %}">Update</a>  <a class="btn btn-danger" href="{% url 'app:bakdelete' pk=bakhood_detail.pk %}">Delete</a></p>
 </div>
 
 {% endblock %}

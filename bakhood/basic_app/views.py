@@ -28,3 +28,24 @@ class BakUpdateView(UpdateView):
 class BakDeleteView(DeleteView):
     model = models.Bakhood
     success_url = reverse_lazy('app:baklist')
+
+class SonCreateView(CreateView):
+    fields = ('name','age','father')
+    model = models.Sons
+    
+class SonUpdateView(UpdateView):
+    fields = ('age','father')
+    model = models.Sons
+    
+class SonDeleteView(DeleteView):
+    model = models.Sons
+    success_url = reverse_lazy('app:baklist')
+    
+class SonListView(ListView):
+    context_object_name='sons'
+    model = models.Sons
+
+class SonDetailView(DetailView):
+    context_object_name ='sons_detail'
+    model = models.Sons
+    template_name = 'basic_app/sons_detail.html'

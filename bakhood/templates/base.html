@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <title>Base</title>
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-<div class="navbar header">
-<ul class="nav navbar-nav">
-<li><a class="navbar-Brand" href="{% url 'index' %}">Bakchod Home</a></li>
-<li><a class="navbar-link" href="{% url 'app:baklist' %}">Bakchods List</a></li>
-<li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<div class="">
+<ul class="navbar-nav">
+<li class="navbar-item"><a class="navbar-brand mb-0 h1" href="{% url 'index' %}">Bakchod Home</a></li>
+<li class="navbar-item"><a class="nav-link" href="{% url 'app:baklist' %}">Bakchods List</a></li>&nbsp;&nbsp;
+<li class="navbar-item"><a class="nav-link" href="{% url 'app:sonlist' %}">Sons List</a></li>&nbsp;&nbsp;
+<li class="navbar-item"><a class="nav-link" href="{% url 'admin:index' %}">Admin</a></li>&nbsp;&nbsp;
 
 </ul>
 </div>
