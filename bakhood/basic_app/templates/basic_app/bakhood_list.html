@@ -6,7 +6,7 @@
 <ol>
 {% for bakhood in bakhoods %}
 
-<h2><li><a href="{{bakhood.id}}">{{bakhood.name}}</a></li></h2>
+<h2><li><p><a href="{{bakhood.id}}"><img src="{{ bakhood.bak_pic.url }}" alt="bak-pic" width=100> </a>    <a href="{{bakhood.id}}">{{bakhood.name}}</a></p></li></h2>
 
 {% endfor %}
 </ol>

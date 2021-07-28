@@ -3,6 +3,7 @@ from django.views.generic import (View,TemplateView, ListView, DetailView, Creat
 from django.http import HttpResponse
 from . import models
 from django.urls import reverse_lazy
+from basic_app import forms
 # Create your views here.
 
 class IndexView(TemplateView):
@@ -18,11 +19,14 @@ class BakDetailView(DetailView):
     template_name = 'basic_app/bakhood_detail.html'
 
 class BakCreateView(CreateView):
-    fields = ('name','real_name','fav_p')
+    fields = ('name','real_name','fav_p','bak_pic')
     model = models.Bakhood
+    # form_class = forms.PhotoUploadModelForm
+    # template_name = 'upload.html'
+    # success_url = reverse_lazy('app:baklist')
     
 class BakUpdateView(UpdateView):
-    fields = ('real_name','fav_p')
+    fields = ('real_name','fav_p','bak_pic')
     model = models.Bakhood
     
 class BakDeleteView(DeleteView):
@@ -30,11 +34,11 @@ class BakDeleteView(DeleteView):
     success_url = reverse_lazy('app:baklist')
 
 class SonCreateView(CreateView):
-    fields = ('name','age','father')
+    fields = ('name','age','father','son_pic')
     model = models.Sons
     
 class SonUpdateView(UpdateView):
-    fields = ('age','father')
+    fields = ('age','father','son_pic')
     model = models.Sons
     
 class SonDeleteView(DeleteView):
@@ -49,3 +53,9 @@ class SonDetailView(DetailView):
     context_object_name ='sons_detail'
     model = models.Sons
     template_name = 'basic_app/sons_detail.html'
+
+
+# class PhotoUploadView(CreateView):
+#     form_class = forms.PhotoUploadModelForm
+#     template_name = 'upload.html'
+#     success_url = reverse_lazy('app:baklist')

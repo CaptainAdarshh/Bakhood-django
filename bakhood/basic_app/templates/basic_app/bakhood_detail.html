@@ -1,11 +1,17 @@
+
 {% extends 'basic_app/basic_app_base.html' %}
+
 {% block body_block %}
+{% comment %} {% load static %} {% endcomment %}
 <div class="jumbotron">
 <h1>Welcome to Bakchods details page:</h1>
 <h2>Bakchods Details:</h2>
+
+<img src="{{ bakhood_detail.bak_pic.url }}" alt="bakchod-profile-pic" height=100>
 <p>Name: {{bakhood_detail.name}}</p>
 <p>Real Name: {{bakhood_detail.real_name}}</p>
 <p>Favourite Pstar: {{bakhood_detail.fav_p}}</p>
+
 
 <h3>Sons: </h3>
 
@@ -18,7 +24,7 @@
     <tr>
 {% for son in bakhood_detail.sons.all %}
 
-    <td><p>{{son.name}}</p></td>
+    <td><p><a class="btn btn-light" href="{% url 'app:sondetail' pk=son.pk %}">{{son.name}}</p></td>
     <td><p>{{son.age}}</p></td>
     <td><p>{{son.father}}</p></td>
     </tr>

@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^listson/$',views.SonListView.as_view(),name='sonlist'),
     url(r'^listson/(?P<pk>\d+)/$',views.SonDetailView.as_view(),name='sondetail'),
     
+    
 ]
